@@ -1,4 +1,4 @@
-# node-win-start-screensaver [![Build Status](https://travis-ci.org/dominiklessel/node-win-start-screensaver.svg)](https://travis-ci.org/dominiklessel/whitelist-obj-props)
+# node-win-start-screensaver
 
 > Starts the default screensaver
 
