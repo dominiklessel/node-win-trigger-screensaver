@@ -2,6 +2,8 @@
 
 > Starts the default screensaver
 
+**Not working right now ...**
+
 ## Install
 
 ```
