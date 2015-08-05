@@ -11,7 +11,11 @@ $ npm install --save node-win-start-screensaver
 ## Usage
 
 ```
-...
+startScreensaver((err) => {
+  if (!!err) {
+    throw err;
+  }
+});
 ```
 
 ## API
