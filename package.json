@@ -1,6 +1,6 @@
 {
   "name": "node-win-start-screensaver",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Starts the default screensaver",
   "main": "dist/startScreensaver.js",
   "scripts": {
