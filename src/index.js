@@ -3,12 +3,13 @@
  * Load modules
  */
 
-import nircmd from 'nircmd';
+const exec = require('child_process').exec;
 
 /**
  * Helpers
  */
 
+const command = 'rundll32 user32.dll,LockWorkStation';
 const noop = function() {};
 
 /**
@@ -20,5 +21,5 @@ export default function(callback) {
     throw new Error('Only works on Windows!');
   }
 
-  nircmd('screensaver', callback || noop);
+  exec(command, callback || noop);
 }

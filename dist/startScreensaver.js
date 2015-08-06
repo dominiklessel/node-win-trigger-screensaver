@@ -1,12 +1,19 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('nircmd')) : typeof define === 'function' && define.amd ? define(['nircmd'], factory) : global.startScreensaver = factory(global.nircmd);
-})(this, function (nircmd) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() : typeof define === 'function' && define.amd ? define(factory) : global.startScreensaver = factory();
+})(this, function () {
   'use strict';
 
   /**
    * Load modules
    */
 
+  var exec = require('child_process').exec;
+
+  /**
+   * Helpers
+   */
+
+  var command = 'rundll32 user32.dll,LockWorkStation';
   var noop = function noop() {};
 
   /**
@@ -18,7 +25,7 @@
       throw new Error('Only works on Windows!');
     }
 
-    nircmd('screensaver', callback || noop);
+    exec(command, callback || noop);
   };
 
   return index;
